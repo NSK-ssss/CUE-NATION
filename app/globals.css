@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .font-cinzel {
+    font-family: var(--font-cinzel), 'Cinzel', serif;
+  }
+  .font-playfair {
+    font-family: var(--font-playfair), 'Playfair Display', serif;
+  }
+  .font-outfit {
+    font-family: var(--font-outfit), 'Outfit', sans-serif;
+  }
+}
+
+@layer base {
+  :root {
+    --felt: #0F3D2E;
+    --felt-dark: #0A2A20;
+    --brass: #C9A24B;
+    --brass-dark: #B08A35;
+    --charcoal: #12161A;
+    --charcoal-card: #1B2128;
+    --ivory: #F7F4EC;
+    --white: #FFFFFF;
+    --ink: #1A1F24;
+    --stone: #C8973D;
+
+    --table-free: #2E9E6B;
+    --table-booked: #E0A526;
+    --table-running: #C9A24B;
+    --table-maintenance: #C8973D;
+
+    --background: #F7F4EC;
+    --foreground: #1A1F24;
+
+    --card: #FFFFFF;
+    --card-foreground: #1A1F24;
+
+    --popover: #FFFFFF;
+    --popover-foreground: #1A1F24;
+
+    --primary: #0F3D2E;
+    --primary-foreground: #FFFFFF;
+
+    --secondary: #F0EAD6;
+    --secondary-foreground: #0F3D2E;
+
+    --muted: #EAE6DB;
+    --muted-foreground: #C8973D;
+
+    --accent: #C9A24B;
+    --accent-foreground: #12161A;
+
+    --destructive: #B23A48;
+    --destructive-foreground: #FFFFFF;
+
+    --border: #E2DCD0;
+    --input: #E2DCD0;
+    --ring: #C9A24B;
+
+    --radius: 14px;
+  }
+
+  .dark {
+    --background: #12161A;
+    --foreground: #F7F4EC;
+
+    --card: #1B2128;
+    --card-foreground: #F7F4EC;
+
+    --popover: #1B2128;
+    --popover-foreground: #F7F4EC;
+
+    --primary: #C9A24B;
+    --primary-foreground: #12161A;
+
+    --secondary: #262E38;
+    --secondary-foreground: #F7F4EC;
+
+    --muted: #262E38;
+    --muted-foreground: #E5B869;
+    --stone: #E5B869;
+
+    --accent: #0F3D2E;
+    --accent-foreground: #F7F4EC;
+
+    --destructive: #B23A48;
+    --destructive-foreground: #FFFFFF;
+
+    --border: #2A333D;
+    --input: #2A333D;
+    --ring: #C9A24B;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-transparent text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+/* Custom Utilities for Tabular Numbers and Felt Baize Textures */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.felt-texture {
+  background-color: #0F3D2E;
+  background-image: radial-gradient(#144d3b 1px, transparent 0);
+  background-size: 16px 16px;
+}

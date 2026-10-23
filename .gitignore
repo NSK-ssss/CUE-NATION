@@ -1,0 +1,12 @@
+node_modules
+# Dependencies
+node_modules/
+
+# Next.js generated files
+.next/
+out/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
